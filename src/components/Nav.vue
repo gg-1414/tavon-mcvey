@@ -1,21 +1,33 @@
 <template>
-  <div class="nav">
-    <a href="#home">Home</a>
-    <a href="#bio">Bio</a>
-    <a href="#work">Work</a>
-    <a href="#gallery">Gallery</a>
-    <a>Videos</a>
-  </div>
+  <nav>
+    <template v-if="route === 'Home'"> 
+      <a href="#hero">Home</a>
+      <a href="#bio">Bio</a>
+      <a href="#work">Work</a>
+      <router-link to="/gallery">Gallery</router-link>
+      <router-link to="/videos">Videos</router-link>
+    </template>
+
+    <template v-else>
+      <router-link to="/">Back</router-link>
+    </template>
+  </nav>
 </template>
 
 <script>
 export default {
-  
+  name: 'Nav',
+  props: {
+    route: {
+      type: String,
+      default: ''
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-  .nav {
+  nav {
     position: fixed;
     top: 0;
     width: 100%;
@@ -33,7 +45,7 @@ export default {
   }
 
   @media screen and (min-width: 768px) {
-    .nav {
+    nav {
       a {
         padding: 0 1rem;
       }

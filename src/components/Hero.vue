@@ -1,5 +1,5 @@
 <template>
-  <section id="home">
+  <section id="hero">
     <div class="image-block">
       <img src="https://ggclients.s3.amazonaws.com/tavon-mcvey/assets/hero.jpg" />
     </div>
@@ -51,7 +51,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  #home {
+  #hero {
     display: flex;
     flex-direction: column;
 
@@ -93,7 +93,7 @@ export default {
   }
 
   @media screen and (max-width: 767px) {
-    #home {
+    #hero {
       .ctas-block {
         display: none;
       }
@@ -101,7 +101,7 @@ export default {
   }
 
   @media screen and (min-width: 768px) {
-    #home {
+    #hero {
       display: grid;
       grid-template-columns: auto 1fr;
       overflow: hidden;

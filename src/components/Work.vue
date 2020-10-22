@@ -58,6 +58,26 @@ export default {
   components: { 
     VueAgile,
   },
+  mounted() {
+    const agile__actions = document.querySelector('.agile__actions') 
+    agile__actions.style.position = "absolute"
+    agile__actions.style.top = "50%"
+    agile__actions.style.width = "100%"
+    agile__actions.style.transform = "translateY(-75%)"
+
+    const buttons = agile__actions.querySelectorAll('button')
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].style.backgroundColor = "transparent"
+      buttons[i].style.border = "none"
+      buttons[i].style.color = "green"
+      buttons[i].style.fontSize = "40px"
+      buttons[i].style.padding = "12px"
+    }
+    buttons[0].innerText = "⇽"
+    buttons[1].innerText = "⇾"
+
+    agile__actions.querySelector('.agile__dots').style.display = "none"
+  }
 }
 </script>
 
@@ -65,6 +85,7 @@ export default {
   #work {
     background-color: #1E1E1E;
     color: white;
+    position: relative;
 
     iframe {
       width: 100%;
