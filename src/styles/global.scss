@@ -1,0 +1,107 @@
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1em;
+  line-height: 1;
+  font-family: 'Helvetica Now Text';
+  color: #2d2e33;
+  background-color: #fbfbfb;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+button:active {
+  border: none;
+  outline: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 14px;
+  text-align: left;
+}
+
+small {
+  font-size: .75rem;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  padding: 0 16px;
+  display: inline-block;
+  line-height: 2;
+  border-radius: 3px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  &:focus { outline: none; }
+}
+
+ul {
+  margin-top: 24px;
+
+  li {
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+}
+
+img {
+  width: 100%;
+}
