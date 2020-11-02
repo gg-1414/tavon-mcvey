@@ -1,6 +1,6 @@
 <template>
   <section id="work">
-    <VueAgile>
+    <agile :dots="false">
       <div class="slide">
         <div class="content-block">
           <div class="text-block">
@@ -47,37 +47,28 @@
           </div>
         </div>
       </div>
-    </VueAgile>
+      <template slot="prevButton">
+        <left-arrow-icon/>
+      </template>
+      <template slot="nextButton">
+        <right-arrow-icon/>
+      </template>
+    </agile>
   </section>
 </template>
 
 <script>
 import { VueAgile } from 'vue-agile'
+import LeftArrowIcon from './icons/LeftArrow.vue'
+import RightArrowIcon from './icons/RightArrow.vue'
+import '@/styles/agile.scss';
 
 export default {
   components: { 
-    VueAgile,
+    agile: VueAgile,
+    LeftArrowIcon,
+    RightArrowIcon
   },
-  mounted() {
-    const agile__actions = document.querySelector('.agile__actions') 
-    agile__actions.style.position = "absolute"
-    agile__actions.style.top = "50%"
-    agile__actions.style.width = "100%"
-    agile__actions.style.transform = "translateY(-75%)"
-
-    const buttons = agile__actions.querySelectorAll('button')
-    for (let i = 0; i < buttons.length; i++) {
-      buttons[i].style.backgroundColor = "transparent"
-      buttons[i].style.border = "none"
-      buttons[i].style.color = "green"
-      buttons[i].style.fontSize = "40px"
-      buttons[i].style.padding = "12px"
-    }
-    buttons[0].innerText = "⇽"
-    buttons[1].innerText = "⇾"
-
-    agile__actions.querySelector('.agile__dots').style.display = "none"
-  }
 }
 </script>
 
@@ -86,6 +77,19 @@ export default {
     background-color: #1E1E1E;
     color: white;
     position: relative;
+
+    &:after {
+      content: "TAVON MCVEY";
+      color: #646464;
+      font-size: 40vh;
+      position: absolute;
+      top: 3rem;
+      left: 0;
+      opacity: 0.2;
+      overflow: hidden;
+      width: 100%;
+      z-index: 0;
+    }
 
     iframe {
       width: 100%;
