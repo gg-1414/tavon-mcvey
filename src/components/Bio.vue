@@ -3,9 +3,17 @@
     <h2>ABOUT ME</h2>
 
     <div class="images-block">
-      <vueper-slides>
-        <vueper-slide v-for="(slide, i) in slides" :key="i" :image="slide.image" />
-      </vueper-slides>
+      <agile>
+        <div v-for="(slide, i) in slides" :key="i" class="slide">
+          <img :src="slide.image" />
+        </div>
+        <template slot="prevButton">
+          <left-arrow-icon/>
+        </template>
+        <template slot="nextButton">
+          <right-arrow-icon/>
+        </template>
+      </agile>
     </div>
 
     <div class="content-block">
@@ -24,25 +32,24 @@
 </template>
 
 <script>
-import { VueperSlides, VueperSlide } from 'vueperslides'
-import 'vueperslides/dist/vueperslides.css'
+import { VueAgile } from 'vue-agile'
+import LeftArrowIcon from './icons/LeftArrow.vue'
+import RightArrowIcon from './icons/RightArrow.vue'
+import '@/styles/agile.scss';
 
 export default {
   components: { 
-    VueperSlides, 
-    VueperSlide 
+    agile: VueAgile,
+    LeftArrowIcon,
+    RightArrowIcon
   },
   data: () => ({
     slides: [
-      { image: 'https://ggclients.s3.amazonaws.com/tavon-mcvey/assets/building-jump-shot.jpg' },
-      { image: 'https://ggclients.s3.amazonaws.com/tavon-mcvey/assets/ult-tag-green-screen.jpg' },
-      { image: 'https://ggclients.s3.amazonaws.com/tavon-mcvey/assets/zen-shot.jpg' }
+      { image: 'https://ggclients.s3.amazonaws.com/tavon-mcvey/assets/zen-shot-mobile.jpeg' },
+      { image: 'https://ggclients.s3.amazonaws.com/tavon-mcvey/assets/building-jump-shot-mobile.jpeg' },
+      { image: 'https://ggclients.s3.amazonaws.com/tavon-mcvey/assets/ult-tag-green-screen.jpg' }
     ]
   }),
-  mounted() {
-    document.querySelector('.vueperslides__inner').style.height = '100%';
-    document.querySelector('.vueperslides__parallax-wrapper').style.paddingBottom = '58%';
-  }
 }
 </script>
 
@@ -52,7 +59,7 @@ export default {
     color: white;
     position: relative;
     display: grid;
-    grid-template-rows: auto .5fr 2fr;
+    grid-template-rows: auto 1.5fr 2fr;
     gap: 1rem;
 
     &:after {
@@ -60,11 +67,12 @@ export default {
       color: #c0c0c0;
       font-size: 40vh;
       position: absolute;
-      top: 2rem;
+      top: 3rem;
       left: 0;
       opacity: 0.2;
       overflow: hidden;
       width: 100%;
+      z-index: 0;
     }
 
     h2 {
@@ -72,13 +80,11 @@ export default {
     }
 
     .images-block {
-      .vueperslides,
-      .vueperslides__inner {
-        height: 100%;
-      }
+      overflow: hidden;
+      z-index: 2;
 
-      .vueperslides__inner {
-        height: 100%;
+      .agile-slides {
+        align-items: flex-start;
       }
     }
 
