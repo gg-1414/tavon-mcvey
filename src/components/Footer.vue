@@ -30,7 +30,7 @@
 
 <style lang="scss" scoped>
   footer {
-    scroll-snap-align: start;
+    scroll-snap-align: end;
     display: flex;
     flex-direction: column-reverse;
 
@@ -43,17 +43,17 @@
       background-color: #eee;
 
       h2 {
-        margin: 16px 0;
+        margin: 20px 0 12px;
       }
 
       form {
         display: grid;
-        gap: 10px;
+        gap: 8px;
         text-align: left;
         padding-top: 4px;
 
         label {
-          font-size: 12px;
+          font-size: 10px;
           font-weight: bold;
           text-transform: uppercase;
           letter-spacing: 1px;
@@ -66,18 +66,21 @@
           width: 100%;
           padding: 6px;
           margin-top: 4px;
+          font-family: monospace;
+          font-size: 14px;
         }
 
         button {
           padding: 6px 12px;
           max-width: 200px;
-          margin: 16px auto 0;
+          margin: 8px auto 0;
           background-color: black;
           color: white;
           border-radius: 4px;
           outline: none;
           border: none;
           cursor: pointer;
+          font-size: 14px;
         }
       }
     }
