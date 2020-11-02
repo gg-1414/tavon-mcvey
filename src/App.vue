@@ -10,6 +10,7 @@
 import Nav from '@/components/Nav.vue'
 import QuickMenu from '@/components/QuickMenu.vue'
 import '@/styles/global.scss';
+
 export default {
   name: 'App',
   components: {
