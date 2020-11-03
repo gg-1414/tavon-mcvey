@@ -9,7 +9,7 @@
             <small>Role: Flow <span>|</span> 2019-2020</small>
           </div>
           <div class="image-block">
-            <img src="https://ggclients.s3.amazonaws.com/tavon-mcvey/assets/ult-tag-poster-1.jpg" />
+            <img src="../assets/ult-tag-poster-1.jpg" />
           </div> 
           <div class="text-block"> 
             <p>Ultimate Tag is an American sports entertainment obstacle course competition television series that involves contestants running through various indoor obstacle courses while professional taggers (yours truly) attempt to catch them. Check it out!</p>
@@ -24,8 +24,8 @@
             <small>Role: Captain of the Boys <span>|</span> 2018-2019</small>
           </div>
           <div class="image-block">
-            <!-- <img src="https://ggclients.s3.amazonaws.com/tavon-mcvey/assets/WCT.jpg" /> -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/A3_Ieginod4?start=204" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <img src="../assets/WCT.jpg" />
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/A3_Ieginod4?start=204" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
           </div> 
           <div class="text-block"> 
             <p>Captain of the Boys, World Chase Tag is an international championship for competitive parkour involving the game of tag.</p>
@@ -40,7 +40,7 @@
             <small>Role: - <span>|</span> 2018-2019</small>
           </div>
           <div class="image-block">
-            <img src="https://ggclients.s3.amazonaws.com/tavon-mcvey/assets/building-jump-shot.jpg" />
+            <img src="../assets/building-jump-shot-mobile.jpeg" />
           </div> 
           <div class="text-block"> 
             <p>Porsche Launch Party is this thing.</p>
@@ -104,8 +104,11 @@ export default {
     }
 
     .content-block {
-      height: 100vh;
+      height: 90vh;
       padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .text-block {
@@ -118,6 +121,27 @@ export default {
       width: calc(100% - 64px);
       margin: auto;
       margin: 16px auto;
+    }
+  }
+
+  @media screen and (min-width: 375px) and (min-height: 667px) {
+    #work {
+      &:after {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      h2 {
+        margin-top: 32px; 
+      }
+
+      .text-block:last-child {
+        padding: 1rem 2rem 1rem;
+
+        p {
+          max-width: calc(100% - 32px);
+        }
+      }
     }
   }
 </style>

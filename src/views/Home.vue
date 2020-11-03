@@ -5,7 +5,7 @@
     <Work/>
     <Footer/>
     <div class="parallax">
-      <img src="https://ggclients.s3.amazonaws.com/tavon-mcvey/assets/WCT.gif"/>
+      <img src="../assets/WCT.gif"/>
     </div>
   </main>
 </template>

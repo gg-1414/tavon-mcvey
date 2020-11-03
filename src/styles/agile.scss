@@ -8,6 +8,10 @@
 
   .agile__slides {
     align-items: flex-start;
+
+    @media screen and (min-height: 800px) {
+      align-items: center;
+    }
   }
 
   .slide {

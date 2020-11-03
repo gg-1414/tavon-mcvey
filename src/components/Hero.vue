@@ -1,7 +1,7 @@
 <template>
   <section id="hero">
     <div class="image-block">
-      <img src="https://ggclients.s3.amazonaws.com/tavon-mcvey/assets/hero.jpg" />
+      <img src="../assets/hero.jpg" />
     </div>
 
     <div class="content-block">
@@ -68,16 +68,23 @@ export default {
     .content-block {
       flex: 1;
       display: grid;
-      gap: .5rem;
-      background: linear-gradient(45deg, black, #afdf63);
-      background: linear-gradient(-45deg, #2F301E, #afdf63);
       background: linear-gradient(-45deg, #afdf63, #341b91);
-      background-size: 400% 400%;
       background-size: 200% 100%;
       animation: gradient 10s ease infinite;
       padding: 1rem;
       color: white;
-      text-align: left;
+
+      > * {
+        text-align: center;
+      }
+
+      h1, p {
+        padding-bottom: .25rem;
+      }
+
+      h2 {
+        padding-bottom: .75rem;
+      }
 
       .socials-block {
         display: flex; 
@@ -96,6 +103,15 @@ export default {
     #hero {
       .ctas-block {
         display: none;
+      }
+    }
+  }
+
+  @media screen and (min-width: 375px) and (min-height: 667px) {
+    #hero {
+      .content-block, 
+      p {
+        text-align: center;
       }
     }
   }

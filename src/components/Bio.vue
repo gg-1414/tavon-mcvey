@@ -4,8 +4,17 @@
 
     <div class="images-block">
       <agile>
-        <div v-for="(slide, i) in slides" :key="i" class="slide">
+        <!-- <div v-for="(slide, i) in slides" :key="i" class="slide">
           <img :src="slide.image" />
+        </div> -->
+        <div class="slide">
+          <img src="../assets/zen-shot-mobile.jpeg" />
+        </div>
+        <div class="slide">
+          <img src="../assets/building-jump-shot-mobile.jpeg" />
+        </div>
+        <div class="slide">
+          <img src="../assets/ult-tag-green-screen.jpg" />
         </div>
         <template slot="prevButton">
           <left-arrow-icon/>
@@ -18,7 +27,7 @@
 
     <div class="content-block">
       <div class="specs">
-        <h3>Age: </h3>
+        <h3>Age: 30 y/o</h3>
         <h3>Build: Athletic</h3>
         <h3>Height: 6’2 1/2</h3>
         <h3>Weight: 187 lbs</h3>
@@ -38,18 +47,12 @@ import RightArrowIcon from './icons/RightArrow.vue'
 import '@/styles/agile.scss';
 
 export default {
+  name: 'Bio',
   components: { 
     agile: VueAgile,
     LeftArrowIcon,
     RightArrowIcon
-  },
-  data: () => ({
-    slides: [
-      { image: 'https://ggclients.s3.amazonaws.com/tavon-mcvey/assets/zen-shot-mobile.jpeg' },
-      { image: 'https://ggclients.s3.amazonaws.com/tavon-mcvey/assets/building-jump-shot-mobile.jpeg' },
-      { image: 'https://ggclients.s3.amazonaws.com/tavon-mcvey/assets/ult-tag-green-screen.jpg' }
-    ]
-  }),
+  }
 }
 </script>
 
@@ -60,7 +63,10 @@ export default {
     position: relative;
     display: grid;
     grid-template-rows: auto 1.5fr 2fr;
-    gap: 1rem;
+
+    > * {
+      margin-bottom: 1rem;
+    }
 
     &:after {
       content: "TAVON MCVEY";
@@ -76,7 +82,7 @@ export default {
     }
 
     h2 {
-      margin-top: 1rem;
+      margin-top: 16px;
     }
 
     .images-block {
@@ -96,6 +102,37 @@ export default {
       .message {
         margin-top: 14px;
         max-width: calc(100% - 64px);
+      }
+    }
+  }
+
+  @media screen and (min-width: 375px) and (min-height: 667px) {
+    #bio {
+      &:after {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      h2 {
+        margin-top: 32px; 
+      }
+
+      .content-block {
+        padding: 1rem;
+
+        .specs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+          h3 {
+            margin-bottom: 4px;
+            padding: 4px 8px 4px 0;
+          }
+        }
+
+        .message {
+          font-size: 16px;
+        }
       }
     }
   }
