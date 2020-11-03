@@ -113,6 +113,14 @@ export default {
       p {
         text-align: center;
       }
+
+      .content-block {
+        padding: 1.5rem 1rem;
+      }
+
+      .socials-block {
+        margin-top: 1rem;
+      }
     }
   }
 
