@@ -14,7 +14,8 @@
 import Hero from '@/components/Hero.vue'
 import Bio from '@/components/Bio.vue'
 import Work from '@/components/Work.vue' 
-import Footer from '@/components/Footer.vue' 
+import Footer from '@/components/Footer.vue'
+import '@/styles/agile.scss';
 
 export default {
   name: 'Home',

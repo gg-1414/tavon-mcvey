@@ -10,6 +10,7 @@
 import Nav from '@/components/Nav.vue'
 import QuickMenu from '@/components/QuickMenu.vue'
 import '@/styles/global.scss';
+import '@/styles/type.scss';
 
 export default {
   name: 'App',
@@ -32,7 +33,7 @@ export default {
   }
 
   #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-family: Avenir, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;

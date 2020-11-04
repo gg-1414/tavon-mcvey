@@ -61,7 +61,6 @@
 import { VueAgile } from 'vue-agile'
 import LeftArrowIcon from './icons/LeftArrow.vue'
 import RightArrowIcon from './icons/RightArrow.vue'
-import '@/styles/agile.scss';
 
 export default {
   components: { 
