@@ -30,7 +30,7 @@
 
 <style lang="scss" scoped>
   footer {
-    scroll-snap-align: end;
+    scroll-snap-align: start;
     display: flex;
     flex-direction: column-reverse;
 
