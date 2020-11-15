@@ -98,6 +98,13 @@ export default {
       padding: 0 1rem;
       text-align: left;
 
+      .specs {
+        h3 {
+          border-left: 2px solid #afdf63;
+          padding: 2px 8px;
+        }
+      }
+
       .message {
         margin-top: 14px;
         max-width: calc(100% - 64px);
@@ -124,8 +131,7 @@ export default {
             grid-template-columns: 1fr 1fr;
 
           h3 {
-            margin-bottom: 4px;
-            padding: 4px 8px 4px 0;
+            padding: 8px;
           }
         }
 
