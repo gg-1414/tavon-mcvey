@@ -143,4 +143,34 @@ export default {
       }
     }
   }
+
+  @media screen and (min-width: 768px) {
+    #work {
+      h2 {
+        margin-top: 64px;
+      }
+      
+      .text-block {
+        h3 {
+          margin: 8px auto;
+        }
+        small {
+          font-size: 16px;
+        }
+      }
+      
+      .image-block {
+        width: calc(100% - 16rem);
+        margin: 40px auto;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    #work {
+      .image-block {
+        width: calc(100% - 60rem);
+      }
+    }
+  }
 </style>

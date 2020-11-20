@@ -46,8 +46,11 @@ export default {
 
   @media screen and (min-width: 768px) {
     nav {
+      padding: 1.5rem;
+
       a {
         padding: 0 1rem;
+        font-size: 20px;
       }
     }
   }

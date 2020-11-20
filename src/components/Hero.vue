@@ -126,19 +126,80 @@ export default {
 
   @media screen and (min-width: 768px) {
     #hero {
-      display: grid;
-      grid-template-columns: auto 1fr;
       overflow: hidden;
 
       .image-block {
-        img { 
-          height: 100%; 
+        max-height: initial;
+        grid-area: image;
+        flex: 3;
+        position: relative;
+
+        img {
+          position: absolute;
+          top: -50px;
+          left: 0;
         }
       }
 
       .content-block {
-        flex: 1;
+        grid-area: content;
         object-fit: fill;
+
+        h1, h2 {
+          padding-bottom: 16px;
+        } 
+        
+        p {
+          padding-bottom: 8px;
+        }
+
+        .ctas-block {
+          margin-top: 16px;
+
+          button {
+            margin: 0 6px;
+          }
+        }
+
+        .socials-block {
+          width: 100%;
+          max-width: initial;
+          justify-content: space-evenly;
+          margin-top: 20px;
+          max-width: 400px;
+          margin: 20px auto 0;
+
+          a {
+            max-width: 40px;
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    #hero {
+      flex-direction: row;
+
+      .image-block {
+        flex: 2;
+      }
+
+      .content-block {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+          flex: 1;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+        }
+
+        .socials-block {
+          flex: 1;
+        }
       }
     }
   }

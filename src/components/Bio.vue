@@ -141,4 +141,42 @@ export default {
       }
     }
   }
+
+  @media screen and (min-width: 768px) {
+    #bio {
+      grid-template-rows: auto 1.5fr 1fr;
+
+      > * {
+        margin-bottom: 24px;
+      }
+
+      h2 {
+        margin-top: 64px;
+      }
+
+      .content-block {
+        padding: 20px 48px;
+
+        .specs h3 {
+          font-size: 20px;
+          padding: 8px 16px;
+        }
+
+        .message {
+          font-size: 20px;
+          margin-top: 32px;
+        }
+      }
+    }
+  }
+</style>
+
+<style lang="scss">
+  @media screen and (min-width: 768px) {
+    #bio {
+      .agile .agile__slides {
+        align-items: flex-start;
+      }
+    } 
+  }
 </style>

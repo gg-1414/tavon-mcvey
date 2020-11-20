@@ -3,7 +3,7 @@
     <div class="image-block">
       <img src="https://ggclients.s3.amazonaws.com/tavon-mcvey/assets/WCT.gif"/>
     </div>
-    <div class="form">
+    <div class="form-block">
       <h2>Let's Work Together!</h2>
       <form>
         <div class="form-group">
@@ -38,7 +38,7 @@
       visibility: hidden;
     }
 
-    .form {
+    .form-block {
       padding: 48px 16px 24px;
       background-color: #eee;
 
@@ -48,9 +48,14 @@
 
       form {
         display: grid;
-        gap: 8px;
         text-align: left;
         padding-top: 4px;
+        max-width: 640px;
+        margin: auto;
+
+        .form-group {
+          margin-bottom: 8px;
+        }
 
         label {
           font-size: 10px;
@@ -66,21 +71,36 @@
           width: 100%;
           padding: 6px;
           margin-top: 4px;
-          font-family: monospace;
+          font-family: inherit;
           font-size: 14px;
         }
+      }
+    }
+  }
 
-        button {
-          padding: 6px 12px;
-          max-width: 200px;
-          margin: 8px auto 0;
-          background-color: black;
-          color: white;
-          border-radius: 4px;
-          outline: none;
-          border: none;
-          cursor: pointer;
-          font-size: 14px;
+  @media screen and (min-width: 768px) {
+    footer {
+      .form-block {
+        h2 {
+          margin-bottom: 16px;
+          margin-top: 32px;
+        }
+
+        form {
+          .form-group {
+            margin-bottom: 16px;
+          }
+
+          label {
+            font-size: 14px;
+          }
+
+          input,
+          textarea {
+            padding: 12px 16px;
+            font-size: 16px;
+            margin-top: 12px;
+          }
         }
       }
     }
